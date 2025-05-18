@@ -11,9 +11,9 @@
 1. Necessário salvar o arquivo .csv na mesma pasta do script (Nas opções a esquerda, tem uma imagem de "pasta", arraste o arquivo para lá ou selecione "Carregar para armazenamento...")
 2. Necessário incluir e ativar a API_KEY, conforme apresentado em aula
 3. Necessário a instalação das bibliotecas abaixo
--     pip install langchain_community
-      pip install langchain_google_genai
-      pip install faiss-cpu
+-     !pip install langchain_community
+      !pip install langchain_google_genai
+      !pip install faiss-cpu
 4. Abaixo, no código, será necessário a exclusão no código abaixo as referências "#VSCODE"" e liberar no código as partes do "#COLAB"
 
 # Utilização do código dentro do VS CODE

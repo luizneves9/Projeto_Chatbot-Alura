@@ -8,6 +8,10 @@
 
 # Funcionamento do projeto
 
+### Imagem final:
+
+![image](https://github.com/user-attachments/assets/e43333ae-5e90-41ae-9f07-7e46bb2a04da)
+
 ### Como Funciona (Visão Geral)
 
 1.  O chatbot carrega dados de um arquivo CSV (como `base_empresa.csv`).

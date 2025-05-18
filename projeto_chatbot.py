@@ -2,11 +2,10 @@
 # 1. Necessário salvar o arquivo .csv na mesma pasta do script (Nas opções a esquerda, tem uma imagem de "pasta", arraste o arquivo para lá ou selecione "Carregar para armazenamento...")
 # 2. Necessário incluir e ativar a API_KEY, conforme apresentado em aula
 # 3. Necessário a instalação das bibliotecas abaixo
-#       pip install dotenv
 #       pip install langchain_community
 #       pip install langchain_google_genai
 #       pip install faiss-cpu
-# Abaixo, no código, será necessário a exclusão no código abaixo as referências "#VSCODE>>>>>"" e liberar no código as partes do "#APENAS PARA COLAB<<<<<"
+# Abaixo, no código, será necessário a exclusão no código abaixo as referências "#VSCODE"" e liberar no código as partes do "#COLAB"
 
 ## --- CASO ABRA NO VSCODE -- ##
 # 1. Necessário salvar o arquivo .csv na mesma pasta do script
@@ -30,14 +29,14 @@ from langchain_core.documents import Document # Estrutura básica usada pela Lan
 
 # --- Configuração de Arquivos e Variáveis de Ambiente ---
 # Obtém o diretório onde o script está sendo executado.
-script_dir = os.path.dirname(__file__) #VSCODE>>>>>
+script_dir = os.path.dirname(__file__) #VSCODE
 # Constrói os caminhos completos para os arquivos .env e CSV.
-csv_arquivo = os.path.join(script_dir, 'base_empresa.csv') #VSCODE>>>>>
-env_arquivo = os.path.join(script_dir, '.env') #VSCODE>>>>>
+csv_arquivo = os.path.join(script_dir, 'base_empresa.csv') #VSCODE
+env_arquivo = os.path.join(script_dir, '.env') #VSCODE
 
 #### --- Caso execute no Google Colab, precisa excluir as etapas acima (script_dir, csv_arquivo e env_arquivo) e deixar apenas o debaixo (retirar os "#" na frente do código) --- ###
-#csv_arquivo = 'base_empresa.csv' #APENAS PARA COLAB<<<<<
-#env_arquivo = '.env' #APENAS PARA COLAB<<<<<
+#csv_arquivo = 'base_empresa.csv' #COLAB
+#env_arquivo = '.env' #COLAB
 
 try:
     load_dotenv(env_arquivo) # Carrega as variáveis definidas no arquivo .env (API_KEY).
@@ -46,8 +45,8 @@ except FileNotFoundError:
     print("Certifique-se de que ele está no mesmo diretório do script.")
     exit(1)
 
-api_key = os.environ.get('GOOGLE_API_KEY') # Obtém a chave da API do Google das variáveis de ambiente. #VSCODE>>>>>
-#api_key = userdata.get('GOOGLE_API_KEY') #APENAS PARA COLAB<<<<<
+api_key = os.environ.get('GOOGLE_API_KEY') # Obtém a chave da API do Google das variáveis de ambiente. #VSCODE
+#api_key = userdata.get('GOOGLE_API_KEY') #COLAB
 if not api_key:
     # Mensagem de erro caso a chave não seja encontrada.
     print('ERRO: A chave GOOGLE_API_KEY não foi encontrada nas variáveis de ambiente.')

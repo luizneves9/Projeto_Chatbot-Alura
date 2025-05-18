@@ -26,6 +26,7 @@ from langchain_community.document_loaders import CSVLoader # Carrega dados de um
 from langchain_google_genai import GoogleGenerativeAIEmbeddings  # Usado para criar representações vetoriais (embeddings) de texto usando modelos do Google
 from langchain_community.vectorstores import FAISS # Biblioteca para criar e gerenciar um vetorstore (banco de dados de vetores) para busca eficiente
 from langchain_core.documents import Document # Estrutura básica usada pela Langchain para representar um pedaço de texto e metadados associados.
+from google.colab import userdata
 
 # --- Configuração de Arquivos e Variáveis de Ambiente ---
 # Obtém o diretório onde o script está sendo executado.
